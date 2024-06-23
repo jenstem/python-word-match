@@ -25,3 +25,17 @@ def createDictionary (word):
         wordIndex[index] = char
 
     return wordIndex
+
+
+def checkGuess(guess, wordAnswer):
+    wordAnswer = createDictionary(wordAnswer)
+    correctSpot = []
+    correctLetter = []
+
+    for index, character in enumerate(guess):
+        if character in wordAnswer[index]:
+            correctSpot.append(character)
+        elif character in wordAnswer.values():
+            correctLetter.append(character)
+
+    return correctSpot, correctLetter
