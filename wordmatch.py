@@ -10,3 +10,9 @@ def pickAnswer():
 
     pickWord = wordList[random.randint(0, len(wordList) - 1)]
     return pickWord
+
+
+def createWordBlanks(word):
+    listCharacters = [char for char in word]
+    wordBlanks = ["_" for _ in listCharacters]
+    return wordBlanks
