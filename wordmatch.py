@@ -16,3 +16,12 @@ def createWordBlanks(word):
     listCharacters = [char for char in word]
     wordBlanks = ["_" for _ in listCharacters]
     return wordBlanks
+
+
+def createDictionary (word):
+    wordIndex = {}
+
+    for index, char in enumerate(word):
+        wordIndex[index] = char
+
+    return wordIndex
