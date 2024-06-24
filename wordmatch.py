@@ -72,7 +72,7 @@ if __name__ == "__main__":
     flag = True
 
     while (flag):
-        usersGuess = input("Please start by guessing a five (5) letter word:")
+        usersGuess = input("\n Guess a five (5) letter word:")
         if (len(usersGuess) != 5):
             print("Please enter a five (5) letter word.")
             continue
