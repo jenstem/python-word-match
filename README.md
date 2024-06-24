@@ -67,7 +67,7 @@ Run the app with the following command line:
 <a id='screenshots'></a>
 ## Screenshots/Gifs:
 
-<img src="https://github.com/jenstem/space_invasion/blob/main/space-invasion-ezgif.com-video-to-gif-converter.gif" width=1000>
+<img src="https://github.com/jenstem/python-word-match/blob/main/wordmatch.gif" width=1000>
 
 <a id='contact'></a>
 ## Contact Me
