@@ -50,3 +50,10 @@ def updateBlanks(correctSpot, correctLetter, startingBlanks):
         else:
             updateBlanks.append("_")
     return updateBlanks
+
+def wrongSpot(correctLetter):
+    if correctLetter:
+        print("You have guessed the correct letter, but in the wrong spot.")
+        for letter in correctLetter:
+            print(f"{letter}, ", end="")
+        print()
