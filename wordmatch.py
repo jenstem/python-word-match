@@ -39,3 +39,14 @@ def checkGuess(guess, wordAnswer):
             correctLetter.append(character)
 
     return correctSpot, correctLetter
+
+def updateBlanks(correctSpot, correctLetter, startingBlanks):
+    updateBlanks = []
+    for index, chars in enumerate(correctLetter):
+        if chars in correctSpot:
+            updateBlanks.append(chars)
+        elif startingBlanks[index] != "_":
+            updateBlanks.append(startingBlanks[index])
+        else:
+            updateBlanks.append("_")
+    return updateBlanks
