@@ -1,10 +1,9 @@
 import random
-from . import foo
 
 
 def pickAnswer():
-    fromDictionary = {1 : "word-list.py"}
-    game = fromDictionary[random.randint(0, 486)]
+    fromDictionary = {1 : "word-list.txt"}
+    game = fromDictionary[random.randint(1, 1)]
     with open(game, 'r') as readDictionary:
         fileList = readDictionary.read()
     wordList = fileList.split("\n")
@@ -19,7 +18,7 @@ def createWordBlanks(word):
     return wordBlanks
 
 
-def createDictionary (word):
+def createDictionary(word):
     wordIndex = {}
 
     for index, char in enumerate(word):
@@ -78,11 +77,11 @@ if __name__ == "__main__":
             print("Please enter a five (5) letter word.")
             continue
 
-        correctSpot, correctLetter = contains(usersGuess, pickWord)
-        currentBlanks = updateBlanks(correctSpot, correctLetter, finalBlanks)
+        correctSpot, correctLetter = checkGuess(usersGuess, pickWord)
+        currentBlanks = updateBlanks(correctSpot, pickWord, finalBlanks)
         print(currentBlanks)
 
-        correctSpot(correctLetter)
+        wrongSpot(correctLetter)
 
         if correctGuess(usersGuess, pickWord):
             print("Congratulations! You won!")
