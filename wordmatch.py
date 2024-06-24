@@ -40,6 +40,7 @@ def checkGuess(guess, wordAnswer):
 
     return correctSpot, correctLetter
 
+
 def updateBlanks(correctSpot, correctLetter, startingBlanks):
     updateBlanks = []
     for index, chars in enumerate(correctLetter):
@@ -51,9 +52,14 @@ def updateBlanks(correctSpot, correctLetter, startingBlanks):
             updateBlanks.append("_")
     return updateBlanks
 
+
 def wrongSpot(correctLetter):
     if correctLetter:
         print("You have guessed the correct letter, but in the wrong spot.")
         for letter in correctLetter:
             print(f"{letter}, ", end="")
         print()
+
+
+def correctGuess(guess, answer):
+    return guess == answer
