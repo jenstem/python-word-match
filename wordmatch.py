@@ -1,4 +1,5 @@
 import random
+from . import foo
 
 
 def pickAnswer():
@@ -63,3 +64,28 @@ def wrongSpot(correctLetter):
 
 def correctGuess(guess, answer):
     return guess == answer
+
+
+if __name__ == "__main__":
+    pickWord = pickAnswer()
+    finalBlanks = createWordBlanks(pickWord)
+    guesses = []
+    flag = True
+
+    while (flag):
+        usersGuess = input("Please start by guessing a five (5) letter word:")
+        if (len(usersGuess) != 5):
+            print("Please enter a five (5) letter word.")
+            continue
+
+        correctSpot, correctLetter = contains(usersGuess, pickWord)
+        currentBlanks = updateBlanks(correctSpot, correctLetter, finalBlanks)
+        print(currentBlanks)
+
+        correctSpot(correctLetter)
+
+        if correctGuess(usersGuess, pickWord):
+            print("Congratulations! You won!")
+            flag = False
+
+        finalBlanks = currentBlanks
