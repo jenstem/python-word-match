@@ -77,6 +77,6 @@ GitHub URL:  https://github.com/jenstem
 <a id='notes'></a>
 ## Notes:
 
-List of letters courtesy of [BYJU's](https://byjus.com/english/5-letter-words/).\
+List of letters courtesy of [BYJU's](https://byjus.com/english/5-letter-words/).
 
 I borrowed and changed code from, [Wordle-Clone-Online](https://github.com/argel6767/Wordle-Clone-Online) by argel6767.
